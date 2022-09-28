@@ -6,14 +6,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NicoMovies</title>
     <link rel="stylesheet" href="./styles/app.css">
-
+    <script src="https://kit.fontawesome.com/019712f0b8.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>NicoMovies</h1>
+    <header id="headerContainer" class="header-container">
+        <div class="burguer_nav-container">
+        </div>
+        <h1 id="pageTitle" class="header-title">Movie.com</h1>
+    </header>
 
+    <!-- #Home -->
+    <div id="homeContainer" class="home-container">
+        <!-- Tendencias container -->
+        <section class="tendencias-container">
+            <div id="homeTrendTitle" class="tendencias-title">
+                <h2>Tendencias</h2>
+            </div>
+            <div id="tendenciaContainer" class="tendencia-cajas">
+                <!-- <div class="tendencia-element">
+                    <img src="" alt="">
+                </div> -->
+            </div>
+        </section>
+        <!-- Categorias container -->
+        <section id="categoriesContainer" class="categories-container">
+            <div class="categories-title">
+                <h2>Categories</h2>
+            </div>
+            <div class="categories-list">
+                <ul id="categoriesList">
+                </ul>
+            </div>
+        </section>
+        <!-- Tu lista container -->
+        <section id="yourListContainer" class="yourlist-container">
+            <div class="yourlist-title">
+                <h2>Tu lista</h2>
+            </div>
+            <div class="yourlist-list">
+                <div class="yourlist-element"></div>
+                <div class="yourlist-element"></div>
+                <div class="yourlist-element"></div>
+                <div class="yourlist-element"></div>
+            </div>
+        </section>
+    </div>
 
+    <!-- #Movie Details -->
+    <div id="movieContainer" class="movie-container inactive">
+        <button class="movie-btn-back-home backBtn">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <div class="movie-details-container">
+            <div class="movie-relleno"></div>
+            <div class="movie-details-container__description">
+                <div class="movie-title">
+                    <h2 id="movieTitle">365</h2>
+                    <div class="movie-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <p id="movieRate"></p>
+                    </div>
+                </div>
+                <div class="movie-description">
+                    <p id="movieDescription">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ullam dicta doloribus architecto suscipit vel eaque incidunt eos, pariatur, excepturi aliquid laboriosam sapiente autem, non numquam dolore eligendi magnam. Minus.
+                    </p>
+                    <div class="movie-description__categories">
+                        <ul id="movieRelatedCategories"></ul>
+                    </div>
+                </div>
+                <div class="movie-description__related-container">
+                    <h3>Peliculas similares</h3>
+                    <div id="relatedMovies" class="related-movies">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- #Category -->
+    <div id="category-container" class="category-container inactive">
+        <div class="back-to-home-btn backBtn">
+            <i class="fa-solid fa-arrow-left"></i>
+        </div>
+        <div class="category-header">
+            <h1 id="categoryTitle" class="category-header__title"></h1>
+            <form class="category-header__searcher">
+                <input type="text" name="searcher" class="category-searcher-input FormInput" placeholder="Buscador">
+                <button type="button" class="category-searcher-button FormButton">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+        </div>
+        <div id="categoryMoviesContainer" class="category-movies-container">
 
+        </div>
+    </div>
+
+    <!-- #Search -->
+    <div id="search-container" class="search-container inactive">
+        <div class="back-to-home-btn backBtn">
+            <i class="fa-solid fa-arrow-left"></i>
+        </div>
+        <div class="search-header">
+            <form class="search-header__searcher">
+                <input type="text" name="searcher"   class="category-searcher-input FormInput" placeholder="Buscador">
+                <button type="button" class="category-searcher-button FormButton">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            <h1 id="searchTitle" class="search-header__title">Peliculas que coinciden con: "Robot"</h1>
+        </div>
+        <div id="searchMoviesContainer" class="search-movies-container">
+        </div>
+    </div>
+
+    <!-- #Tendencias -->
+    <div id="tendencias-container" class="category-container inactive">
+        <div class="back-to-home-btn">
+            <a href="#home" class="backBtn">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+        </div>
+        <div class="category-header">
+            <h1 class="category-header__title">Tendencias</h1>
+            <form class="category-header__searcher">
+                <input type="text" name="searcher" class="category-searcher-input inputSearch FormInput" placeholder="Buscador">
+                <button type="button" class="category-searcher-button FormButton">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+        </div>
+        <div id="trendMoviesContainer" class="category-movies-container">
+
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer id="footerContainer" class="footer-container">
+        <span>Una creación de NicoDev @NicoLuj4n</span>
+    </footer>
+        
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="src/private.js"></script>
+    <script src="src/nodes.js"></script>
     <script src="./src/main.js"></script>
+    <script src="src/navigation.js"></script>
 </body>
 </html>
